@@ -5,13 +5,13 @@
       "src": "index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["public/**/*.json"]
+        "includeFiles": ["public/**/*"]
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*\\.json)",
+      "src": "/(.*\\.json)$",
       "dest": "/public/$1"
     }
   ]
