@@ -2,17 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
-      "use": "@vercel/node",
+      "src": "package.json",
+      "use": "@vercel/static-build",
       "config": {
-        "includeFiles": ["public/**/*.json"]
+        "distDir": "public"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "^/(.*\\.json)$",
-      "dest": "/public/$1"
     }
   ]
 }
