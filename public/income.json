@@ -1,0 +1,16 @@
+[
+  {
+    "idea": "eBook",
+    "build_time_days": 7,
+    "effort": "medium",
+    "language": "EN",
+    "market": "global"
+  },
+  {
+    "idea": "Notion Kit",
+    "build_time_days": 3,
+    "effort": "low",
+    "language": "EN",
+    "market": "productivity"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "life-os-api",
+  "version": "1.0.0",
+  "description": "Static-data API for Life.OS",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.0",
+    "node-fetch": "^2.7.0"
+  }
+}
