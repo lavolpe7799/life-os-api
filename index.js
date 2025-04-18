@@ -1,4 +1,16 @@
-﻿require('dotenv').config();
+﻿const fs = require('fs');
+const path = require('path');
+
+// Ensure folders exist
+['public', 'static'].forEach(dir => {
+  const fullPath = path.join(__dirname, dir);
+  if (!fs.existsSync(fullPath)) {
+    fs.mkdirSync(fullPath, { recursive: true });
+    console.log(`📁 Created missing folder: ${dir}`);
+  }
+});
+
+require('dotenv').config();
 
 const scrapers = [
   require('./scrapers/jobs'),

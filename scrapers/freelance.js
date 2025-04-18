@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+// scrapers/freelance.js
+const { safeWriteJSON } = require('../utils/fsHelpers');
 
 async function fetchAndSave() {
   const data = require('../public/freelance-manual.json');
-  fs.writeFileSync(
-    path.join(__dirname, '../public/freelance.json'),
-    JSON.stringify(data, null, 2)
-  );
+  safeWriteJSON('freelance.json', Array.isArray(data) ? data : []);
 }
 
 module.exports = { fetchAndSave, name: 'freelance' };

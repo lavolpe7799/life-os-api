@@ -1,29 +1,29 @@
 [
   {
     "asset": "bitcoin",
-    "price": 84590,
+    "price": 84546,
     "risk": "high",
     "platform": "CoinGecko",
-    "timestamp": 1744981783076
+    "timestamp": 1744982615451
   },
   {
     "asset": "ethereum",
-    "price": 1590.66,
+    "price": 1589.76,
     "risk": "high",
     "platform": "CoinGecko",
-    "timestamp": 1744981783076
+    "timestamp": 1744982615451
   },
   {
     "asset": "tether",
-    "price": 0.999881,
+    "price": 0.999891,
     "risk": "high",
     "platform": "CoinGecko",
-    "timestamp": 1744981783076
+    "timestamp": 1744982615451
   },
   {
     "asset": "SPY",
     "risk": "medium",
     "platform": "NYSE",
-    "timestamp": 1744981783076
+    "timestamp": 1744982615451
   }
 ]

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+// scrapers/migration.js
+const { safeWriteJSON } = require('../utils/fsHelpers');
 
 async function fetchAndSave() {
   const data = [
@@ -7,10 +7,7 @@ async function fetchAndSave() {
     { type: 'D7', salary_requirement: 3000, certs: [], avg_time_days: 120 },
     { type: 'UAE Remote', salary_requirement: 5000, certs: [], avg_time_days: 30 }
   ];
-  fs.writeFileSync(
-    path.join(__dirname, '../public/migration.json'),
-    JSON.stringify(data, null, 2)
-  );
+  safeWriteJSON('migration.json', data);
 }
 
 module.exports = { fetchAndSave, name: 'migration' };

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+// scrapers/location.js
+const { safeWriteJSON } = require('../utils/fsHelpers');
 
 async function fetchAndSave() {
   const loc = {
@@ -7,10 +7,7 @@ async function fetchAndSave() {
     country: process.env.COUNTRY || null,
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
   };
-  fs.writeFileSync(
-    path.join(__dirname, '../public/location.json'),
-    JSON.stringify(loc, null, 2)
-  );
+  safeWriteJSON('location.json', loc);
 }
 
 module.exports = { fetchAndSave, name: 'location' };

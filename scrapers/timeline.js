@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+// scrapers/timeline.js
+const { safeWriteJSON } = require('../utils/fsHelpers');
 
 async function fetchAndSave() {
   const data = require('../public/timeline.json');
-  fs.writeFileSync(
-    path.join(__dirname, '../public/timeline.json'),
-    JSON.stringify(data, null, 2)
-  );
+  safeWriteJSON('timeline.json', data);
 }
 
 module.exports = { fetchAndSave, name: 'timeline' };

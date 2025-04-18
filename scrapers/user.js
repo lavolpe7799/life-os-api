@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+// scrapers/user.js
+const { safeWriteJSON } = require('../utils/fsHelpers');
 
 async function fetchAndSave() {
   const data = require('../public/user.json');
-  fs.writeFileSync(
-    path.join(__dirname, '../public/user.json'),
-    JSON.stringify(data, null, 2)
-  );
+  safeWriteJSON('user.json', data);
 }
 
 module.exports = { fetchAndSave, name: 'user' };
